@@ -1,0 +1,109 @@
+.container {
+    box-shadow: 1px 2px 15px 10px rgba(192,192,192,0.26);
+    table.MuiTable-root {
+        min-width: 750px;
+        thead.MuiTableHead-root {
+            background: #f3f6f9 !important;
+            tr.MuiTableRow-root.MuiTableRow-head {
+                th {
+                    border-bottom: 0 !important;
+                }
+            }
+        }
+        tbody.MuiTableBody-root {
+            tr.MuiTableRow-root.MuiTableRow-hover:last-child {
+                td {
+                    border-bottom: 0 !important;
+                }
+            }
+        }
+
+        .MuiTableCell-root {
+            font-family: inherit !important;
+            font-size: inherit !important;
+            font-weight: inherit !important;
+            &.MuiTableCell-head {
+                color: #899198 !important;
+                font-weight: 400 !important;
+                font-size: 12px !important;
+            }
+        }
+    }
+}
+
+.location-cell,
+.entries-cell,
+.name-cell {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    span:first-child {
+        color: #25213b;
+        font-size: 12px;
+        font-weight: 700;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        span {
+            margin-right: 6px;
+            width: 6px;
+            height: 6px;
+            border-radius: 9999px;
+            background: #25213b;
+            display: block;
+        }
+    }
+
+    span:last-child {
+        color: #878592;
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+
+.issues-cell {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    span {
+        padding: 2px 12px 2px 12px;
+        border-radius: 9999px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #8c70ff;
+        background: #fff6de;
+        &.no-issues {
+            color: #8c70ff;
+            background: #f6f3ff;
+        }
+    }
+}
+.risk-cell {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    span {
+        font-weight: 500;
+        font-size: 14px;
+        img {
+            margin-right: 12px;
+            width: 9px;
+            height: 9px;
+        }
+        &.low-risk {
+            color: #3ab65c;
+        }
+        &.mid-risk {
+            color: #3c3ab6;
+        }
+        &.high-risk {
+            color: #b63a3a;
+        }
+    }
+}

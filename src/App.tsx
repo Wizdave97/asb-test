@@ -1,24 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './Components/Navbar'
+import CaretRight from './assets/caret_right.svg'
+import Metrics from './Components/MetricCard';
+import DivisionCard from './Components/DivisionCard';
+import ModuleCard from './Components/Module';
+import EnhancedTable from './Components/Rtable';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Navbar />
+      <div className='bread-crumbs'>
+        <div className='crumbs'>
+          <span>
+            Divisions
+          </span>
+          <span>
+            <img src={CaretRight} alt='' />
+          </span>
+          <span>
+            Module
+          </span>
+        </div>
+      </div>
+      <div className='metrics'>
+        <Metrics/>
+      </div>
+      <div className='content'>
+        <section className='left-section'>
+          <DivisionCard/>
+          <ModuleCard/>
+        </section>
+        <section className='right-section'>
+          <EnhancedTable/>
+        </section>
+      </div>
     </div>
   );
 }

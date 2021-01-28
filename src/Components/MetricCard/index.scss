@@ -1,0 +1,36 @@
+.metric-card {
+    border-radius: 6px;
+    width: 258px;
+    min-width: 258px;
+    height: 129px;
+    box-shadow: 1px 2px 15px 1px rgba(192,192,192,0.26);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 24px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-right: 24px;
+    &:first-child {
+        margin-left: 0;
+    }
+    .metric {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        span {
+            font-size: 32px;
+            font-weight: 700px;
+            line-height: 44px;
+        }
+    }
+    .sub {
+        color: #9696A0;
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
