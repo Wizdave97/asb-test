@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:5000',
+  uri: process.env.NODE_ENV === 'production' ? 'https://afternoon-beach-40530.herokuapp.com' : '/api',
   cache: new InMemoryCache()
 });
 ReactDOM.render(
